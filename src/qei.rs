@@ -14,15 +14,15 @@ pub trait Pins<TIM> {
     const REMAP: u8;
 }
 
-impl Pins<TIM2> for (PA0<Input<Floating>>, PA1<Input<Floating>>) {
+impl<MODE> Pins<TIM2> for (PA0<Input<MODE>>, PA1<Input<MODE>>) {
     const REMAP: u8 = 0b00;
 }
 
-impl Pins<TIM3> for (PA6<Input<Floating>>, PA7<Input<Floating>>) {
+impl<MODE> Pins<TIM3> for (PA6<Input<MODE>>, PA7<Input<MODE>>) {
     const REMAP: u8 = 0b00;
 }
 
-impl Pins<TIM4> for (PB6<Input<Floating>>, PB7<Input<Floating>>) {
+impl<MODE> Pins<TIM4> for (PB6<Input<MODE>>, PB7<Input<MODE>>) {
     const REMAP: u8 = 0b00;
 }
 
